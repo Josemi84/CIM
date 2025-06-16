@@ -1,0 +1,19 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CIM.APP.InventariosGuardados"
+             Title="Inventarios Guardados">
+
+    <VerticalStackLayout Padding="20">
+        <Label Text="Inventarios Guardados" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center" />
+
+        <CollectionView x:Name="InventariosCollectionView" SelectionMode="Single" SelectionChanged="OnInventarioSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Gray" Padding="10" Margin="5">
+                        <Label Text="{Binding Nombre}" FontSize="18" />
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

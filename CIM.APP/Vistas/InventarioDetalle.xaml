@@ -1,0 +1,20 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CIM.APP.InventarioDetalle"
+             Title="Detalle Inventario">
+
+    <VerticalStackLayout Padding="20">
+        <Label Text="Productos del Inventario" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center" />
+
+        <CollectionView x:Name="ProductosCollectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout Spacing="20" Padding="5">
+                        <Label Text="{Binding Barcode}" WidthRequest="200"/>
+                        <Label Text="{Binding Quantity}" WidthRequest="80" HorizontalTextAlignment="Center"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
