@@ -7,10 +7,10 @@
     <VerticalStackLayout Padding="20">
         <!-- Aquí estamos utilizando CameraBarcodeReaderView -->
         <zxing:CameraBarcodeReaderView x:Name="cameraView"
-                                       BarcodesDetected="OnBarcodeDetected"
-                                       IsTorchOn="false"
-                                       HorizontalOptions="FillAndExpand"
-                                       VerticalOptions="FillAndExpand" />
+                               BarcodesDetected="OnBarcodeDetected"
+                               IsTorchOn="false"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand" />
         <Button Text="Volver" Clicked="OnBackClicked" />
     </VerticalStackLayout>
 </ContentPage>
